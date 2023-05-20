@@ -37,14 +37,18 @@
 			<xsl:element name="ciclos">
 				<xsl:for-each select="ite/ciclos/ciclo">
 					<xsl:element name="ciclo">
+						<xsl:value-of select="@id"/>
+					</xsl:element>
+					<xsl:element name="ciclo">
 						<xsl:attribute name="grado"><xsl:value-of select="grado"/></xsl:attribute>
 						<xsl:value-of select="nombre"/>
 						<!-- introducimos un salto de linea para separar las etiquetas
-							nombre y decretoTitulo -->
-						<xsl:text>&#xa;</xsl:text>
-						<xsl:element name="decretoTitulo">
+							nombre y decretoTitulo 
+						<xsl:text>&#xa;</xsl:text> -->
+						
+					</xsl:element>
+					<xsl:element name="decretoTitulo">
 							<xsl:value-of select="decretoTitulo/@año"/>
-						</xsl:element>
 					</xsl:element>
 				</xsl:for-each>
 			</xsl:element>
